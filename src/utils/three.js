@@ -15,8 +15,8 @@ export const cleanScene = scene => {
       }
     }
   });
-
-  scene.dispose();
+  // Scene.dispose() was removed from Three.js; meshes/materials/geometries are disposed above.
+  // Removing references to the scene will allow GC to reclaim it.
 };
 
 /**

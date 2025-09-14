@@ -3,12 +3,14 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 import "./SideNavbar.css";
 
 export const SideNavbar = () => {
   return (
     <nav>
+      <img src={logo} alt="Logo" className="sidebar-logo" />
       <NavLink
         exact
         to="/"
@@ -24,12 +26,6 @@ export const SideNavbar = () => {
         <Typography>Projects</Typography>
       </NavLink>
       <NavLink
-        to="/blog"
-        activeClassName="active"
-      >
-        <Typography>Blog</Typography>
-      </NavLink>
-      <NavLink
         to={{ pathname: '/', hash: '#about' }}
         isActive={(match, location) => location.pathname === '/' && location.hash === '#about'}
         activeClassName="active"
@@ -43,6 +39,7 @@ export const SideNavbar = () => {
       >
         <Typography>Contact</Typography>
       </NavLink>
+      {/* Blog removed */}
     </nav>
   );
 };

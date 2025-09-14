@@ -7,7 +7,7 @@ import { FirstName, LastName } from "../../utils/getName";
 
 import './About.css';
 
-import profile from '../../assets/profile.png';
+import profile from '../../assets/profile.jpg';
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -31,8 +31,8 @@ export const About = () => {
         <div className="about">
           <div className="_img"
             style={{ 
-              background: "url(" + profile + ")",
-              backgroundSize: 'contain',
+              backgroundImage: `url(${profile})`,
+              backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
             }}

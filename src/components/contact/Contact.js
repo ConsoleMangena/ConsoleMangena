@@ -70,7 +70,7 @@ export const Contact = () => {
                   className={classes.formfield}
                 />
                 <TextField
-                  id="outlined-password-input"
+                  id="outlined-email-input"
                   label="Email"
                   type="email"
                   size="small"
@@ -79,7 +79,7 @@ export const Contact = () => {
                   className={classes.formfield}
                 />
                 <TextField
-                  id="outlined-password-input"
+                  id="outlined-message-input"
                   label="Message"
                   type="textarea"
                   size="small"

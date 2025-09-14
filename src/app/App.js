@@ -9,7 +9,6 @@ import { logCredits } from "../utils/logCredits";
 import { Home } from "../pages/Home";
 
 const Resume = lazy(() => import("../pages/Resume"));
-const Blog = lazy(() => import("../pages/Blog"));
 const PageNotFound = lazy(() => import("../pages/PageNotFound"));
 
 export const App = () => {
@@ -23,7 +22,6 @@ export const App = () => {
           <Suspense fallback={null}>
             <Switch>
                 <Route path="/" exact component={Home} />
-                <Route path="/blog" component={Blog} />
                 <Route path="/resume" component={Resume} />
                 <Route path="*" component={PageNotFound} />
             </Switch>

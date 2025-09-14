@@ -11,12 +11,14 @@
   font-size: 1.15rem;
 }
 ._img {
-  margin: 10em;
-  width: 35em;
-  height: 20em;
-  border-radius: 16px;
+  margin: 2em auto;
+  width: clamp(12rem, 40vw, 22rem);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  border-radius: 50%;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.51);
+  overflow: hidden;
 }
 ._content_wrapper {
   width: 40%;
@@ -37,7 +39,8 @@
     margin-right: 3rem;
   }
   ._img {
-    margin: 2em;
+    margin: 2em auto;
+    width: clamp(12rem, 50vw, 20rem);
   }
   ._content_wrapper {
     width: 40%;
@@ -50,8 +53,7 @@
     flex-direction: column;
   }
   ._img {
-    width: 15em;
-    height: 12em;
+    width: clamp(10rem, 60vw, 16rem);
   }
   ._content_wrapper {
     width: 15em;

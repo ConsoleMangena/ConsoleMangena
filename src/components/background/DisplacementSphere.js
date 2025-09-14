@@ -49,9 +49,29 @@ const DisplacementSphere = (props) => {
     const isInViewport = useInViewport(canvasRef);
 
     useEffect(() => {
+        if (!canvasRef.current) {
+            console.warn("[Three] Canvas ref not available. Skipping DisplacementSphere.");
+            return;
+        }
         mouse.current = new Vector2(0.8, 0.5);
+        let gl = null;
+        try {
+            gl =
+                canvasRef.current.getContext("webgl") ||
+                canvasRef.current.getContext("experimental-webgl");
+        } catch (e) {}
+        // Bail if no WebGL or missing precision query support (prevents getMaxPrecision errors)
+        const hasPrecisionSupport =
+            gl && typeof gl.getShaderPrecisionFormat === "function" &&
+            gl.getShaderPrecisionFormat(gl.FRAGMENT_SHADER, gl.HIGH_FLOAT);
+        if (!gl || !hasPrecisionSupport) {
+            console.warn("[Three] WebGL not available. Skipping DisplacementSphere.");
+            return;
+        }
         renderer.current = new WebGLRenderer({
             canvas: canvasRef.current,
+            context: gl,
+            antialias: true,
             powerPreference: "high-performance",
         });
         renderer.current.setSize(width.current, height.current);
@@ -91,12 +111,13 @@ const DisplacementSphere = (props) => {
         scene.current.add(sphere.current);
 
         return () => {
-            cleanScene(scene.current);
-            cleanRenderer(renderer.current);
+            if (scene.current) cleanScene(scene.current);
+            if (renderer.current) cleanRenderer(renderer.current);
         };
     }, []);
 
     useEffect(() => {
+        if (!scene.current) return;
         const dirLight = new DirectionalLight(
             rgbToThreeColor("250 250 250"),
             0.6
@@ -115,16 +136,17 @@ const DisplacementSphere = (props) => {
         lights.current.forEach((light) => scene.current.add(light));
 
         return () => {
-            removeLights(lights.current);
+            if (lights.current) removeLights(lights.current);
         };
     }, [rgbBackground, theme]);
 
     useEffect(() => {
+        if (!renderer.current || !camera.current || !sphere.current || !canvasRef.current) return;
         const handleResize = () => {
             const canvasHeight = innerHeight();
             const windowWidth = window.innerWidth;
             const fullHeight = canvasHeight + canvasHeight * 0.3;
-            canvasRef.current.style.height = fullHeight;
+            canvasRef.current.style.height = `${fullHeight}px`;
             renderer.current.setSize(windowWidth, fullHeight);
             camera.current.aspect = windowWidth / fullHeight;
             camera.current.updateProjectionMatrix();
@@ -155,6 +177,7 @@ const DisplacementSphere = (props) => {
     }, [prefersReducedMotion]);
 
     useEffect(() => {
+        if (!sphere.current) return;
         const onMouseMove = (event) => {
             const { rotation } = sphere.current;
 
@@ -198,6 +221,7 @@ const DisplacementSphere = (props) => {
     }, [isInViewport, prefersReducedMotion]);
 
     useEffect(() => {
+        if (!renderer.current || !camera.current || !scene.current) return;
         let animation;
 
         const animate = () => {

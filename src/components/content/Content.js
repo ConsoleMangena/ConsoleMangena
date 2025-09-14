@@ -18,8 +18,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   jobs: {
+    fontSize: 'clamp(2rem, 6vw, 3.5rem)',
+    lineHeight: 1.1,
     "@media (max-width: 768px)": {
-      fontSize: '3rem',
+      fontSize: 'clamp(1.75rem, 8vw, 2.5rem)',
     },
   },
 }));
@@ -34,7 +36,7 @@ export const Content = () => {
             <TextDecrypt text={`${FirstName} ${LastName}`} />
         </Typography>
         <Typography variant="h1" component="h1" className={classes.jobs}>
-            <TextDecrypt text={`${Resume.basics.job1} + `} />
+            <TextDecrypt text={`${Resume.basics.job1} ${Resume.basics.job3} + `} />
             <TextDecrypt text={`${Resume.basics.job2}`} />
         </Typography>
       </div>

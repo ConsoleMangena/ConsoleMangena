@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { LogoLink } from '../components/logo/LogoLink';
 import { Content } from '../components/content/Content';
 import { Hidden } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -44,7 +43,6 @@ export const Home = () => {
     <>
       <div className={classes.root} id="home">
         <DisplacementSphere />
-        <LogoLink />
         <Content />
         <ThemeToggle />
         <Hidden smDown>
