@@ -1,0 +1,108 @@
+{
+    "basics": {
+        "name": "Consolation Mangena",
+        "label": "Software Engineer",
+        "email": "",
+        "phone": "",
+        "picture": "mt.png",
+        "x_title": "Hello, I'm",
+        "job1": "Full Stack",
+        "job2": "Engineer",
+        "description": "Portfolio of Consolation Mangena.",
+        "summary": "",
+        "keywords": "consolation,mangena,portfolio,website,react,developer",
+        "url": "/",
+        "location": {
+            "address": "5 Sekope, Highlands",
+            "postalCode": "",
+            "city": "Gweru",
+            "country": "Zimbabwe",
+            "countryCode": "+263",
+            "region": "Midlands"
+        },
+        "profiles": []
+    },
+    "work": [
+        {
+            "company": "Eineva Tech",
+            "position": "Founder",
+            "website": "https://eineva.co.zw/",
+            "startDate": "2013-01-01",
+            "endDate": "2014-01-01",
+            "summary": "Description...",
+            "highlights": ["Started the company"]
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "SiteSurveyor",
+            "position": "Founder",
+            "website": "http://sitesurveyor/",
+            "startDate": "2012-01-01",
+            "endDate": "2013-01-01",
+            "summary": "Description...",
+            "highlights": ["Awarded 'Volunteer of the Month'"]
+        }
+    ],
+    "education": [
+        {
+            "institution": "University",
+            "area": "Software Development",
+            "studyType": "Bachelor",
+            "startDate": "2011-01-01",
+            "endDate": "2013-01-01",
+            "gpa": "4.0",
+            "courses": ["DB1101 - Basic SQL"]
+        }
+    ],
+    "awards": [
+        {
+            "title": "Award",
+            "date": "2014-11-01",
+            "awarder": "Company",
+            "summary": "There is no spoon."
+        }
+    ],
+    "publications": [
+        {
+            "name": "Publication",
+            "publisher": "Company",
+            "releaseDate": "2014-10-01",
+            "website": "http://publication.com",
+            "summary": "Description..."
+        }
+    ],
+    "skills": [
+        {
+            "name": "Web Development",
+            "level": "Master",
+            "keywords": ["HTML", "CSS", "Javascript"]
+        }
+    ],
+    "languages": [
+        {
+            "language": "German",
+            "fluency": "Native speaker"
+        },
+        {
+            "language": "English",
+            "fluency": "Fluent speaker"
+        },
+        {
+            "language": "French",
+            "fluency": "Good knowledge"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Wildlife",
+            "keywords": ["Ferrets", "Unicorns"]
+        }
+    ],
+    "references": [
+        {
+            "name": "Jane Doe",
+            "reference": "Reference..."
+        }
+    ]
+}
