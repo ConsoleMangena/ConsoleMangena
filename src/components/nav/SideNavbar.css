@@ -2,32 +2,95 @@ nav {
   position: fixed;
   display: flex;
   flex-direction: row-reverse;
-  transform: rotate(-90deg) translate3d(-50%,0,0);
-  top: 15%;
-  left: -6.5rem;
-  z-index: 1000;
+  align-items: center;
+  top: 80%;
+  left: 0.35rem;
+  transform-origin: top left;
+  transform: translateY(-50%) rotate(-90deg);
+  z-index: 2000;
+  gap: 0.8rem; /* increased spacing between links */
 }
 nav a {
-  margin-right: 20px;
+  margin-right: 0;
   text-decoration: none;
   color: #575757;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  font-size: 0.8rem; /* smaller text to fit on screen */
+  opacity: 0.85;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  padding: 0.25rem 0.35rem; /* improve click target and perceived spacing */
+  border-radius: 6px;
 }
 nav a:hover {
-  margin-right: 20px;
   text-decoration: none;
   color: #ec704c;
+  opacity: 1;
 }
 nav a.active {
   color: #ec704c;
 }
 
+@media (max-width: 400px) {
+  nav {
+    gap: 0.4rem;
+    padding: 0.25rem 0.5rem;
+  }
+  nav a {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.45rem;
+  }
+  .sidebar-logo {
+    display: none;
+  }
+}
 /* Sidebar logo image */
 .sidebar-logo {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
-  margin-right: 20px;
+  margin-right: 0;
   /* Counter-rotate to keep the logo upright despite the rotated sidebar */
   transform: rotate(90deg);
   transform-origin: center;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    left: 0.35rem;
+    gap: 0.6rem;
+    top: 72%;
+  }
+  nav a { font-size: 0.75rem; }
+  .sidebar-logo { width: 34px; height: 34px; }
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    bottom: 0.75rem;
+    top: auto;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 0.65rem;
+    padding: 0.35rem 0.6rem;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 999px;
+    z-index: 2000;
+  }
+  nav a {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.5rem;
+  }
+  .sidebar-logo {
+    width: 28px;
+    height: 28px;
+    transform: none;
+  }
 }

@@ -32,3 +32,23 @@ p {
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
 }
+
+/* Improve readability and spacing on small screens */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  body {
+    /* Space for fixed bottom navigation */
+    padding-bottom: 80px;
+  }
+}
+
+/* Account for iOS safe areas */
+@supports (padding: max(0px)) {
+  @media (max-width: 768px) {
+    body {
+      padding-bottom: max(80px, env(safe-area-inset-bottom));
+    }
+  }
+}

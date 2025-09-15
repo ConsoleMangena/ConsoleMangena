@@ -6,14 +6,20 @@ import Resume from '../../settings/resume.json';
 const useStyles = makeStyles((theme) => ({
   socialIcons: {
     position: 'fixed',
-    top: theme.spacing(6),
-    right: theme.spacing(6),
+    top: '50%',
+    right: theme.spacing(4),
+    transform: 'translateY(-50%)',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: theme.spacing(2),
+    rowGap: theme.spacing(2),
   },
   iconButton: {
     height: '2.5rem',
     width: '2.5rem',
     display: 'block',
-    marginBottom: theme.spacing(2),
+    marginBottom: 0,
   },
   icon: {
     fontSize: '1.25rem',

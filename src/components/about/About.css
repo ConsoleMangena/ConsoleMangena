@@ -1,10 +1,13 @@
 .about {
-  width: 80%;
-  margin-left: 7rem;
-  margin-right: 7rem;
+  width: min(100%, 1160px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 2rem;
 }
 .heading {
   width: 30%;
@@ -35,27 +38,29 @@
 }
 @media (max-width: 1024px) {
   .about {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    gap: 1.5rem;
   }
   ._img {
     margin: 2em auto;
     width: clamp(12rem, 50vw, 20rem);
   }
   ._content_wrapper {
-    width: 40%;
+    width: 48%;
   }
 }
 @media (max-width: 768px) {
   .about {
-    margin-left: 4em;
-    margin-right: 4em;
+    margin-left: auto;
+    margin-right: auto;
     flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
   ._img {
     width: clamp(10rem, 60vw, 16rem);
   }
   ._content_wrapper {
-    width: 15em;
+    width: 100%;
+    max-width: 36rem;
   }
 }

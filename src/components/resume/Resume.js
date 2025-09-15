@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Link } from '@material-ui/core';
 import { TextDecrypt } from '../content/TextDecrypt';
-import ResumePDF from './../../assets/Tan_Mark_Resume.pdf';
+import { Link as RouterLink } from 'react-router-dom';
 import {
   ResumeIcon
 } from '../content/ResumeButton';
@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     flexWrap: 'wrap',
+    '@media (max-width: 768px)': {
+      bottom: theme.spacing(12),
+      left: theme.spacing(3),
+    },
   },
   
 }));
@@ -30,9 +34,8 @@ export const Resume = () => {
     <Link
       color='inherit'
       underline='none'
-      href= {`${ResumePDF}`}
-      target='_blank'
-      rel='noopener noreferrer'
+      component={RouterLink}
+      to='/resume'
       className={classes.footerText}
     >
       <ResumeIcon />

@@ -1,7 +1,7 @@
 {
     "basics": {
         "name": "Consolation Mangena",
-        "label": "Software Engineer",
+        "label": "Full‑Stack Software Engineer & Consultant",
         "email": "",
         "phone": "",
         "picture": "mt.png",
@@ -21,16 +21,53 @@
             "countryCode": "+263",
             "region": "Midlands"
         },
-        "profiles": []
+        "profiles": [
+            {
+                "network": "GitHub",
+                "username": "your-github",
+                "url": "https://github.com/your-github",
+                "x_icon": "fab fa-github"
+            },
+            {
+                "network": "LinkedIn",
+                "username": "your-linkedin",
+                "url": "https://www.linkedin.com/in/your-linkedin",
+                "x_icon": "fab fa-linkedin-in"
+            },
+            {
+                "network": "Telegram",
+                "username": "your-telegram",
+                "url": "https://t.me/your-telegram",
+                "x_icon": "fab fa-telegram-plane"
+            },
+            {
+                "network": "Instagram",
+                "username": "your-instagram",
+                "url": "https://instagram.com/your-instagram",
+                "x_icon": "fab fa-instagram"
+            },
+            {
+                "network": "Facebook",
+                "username": "your-facebook",
+                "url": "https://facebook.com/your-facebook",
+                "x_icon": "fab fa-facebook-f"
+            },
+            {
+                "network": "Email",
+                "username": "you@example.com",
+                "url": "mailto:you@example.com",
+                "x_icon": "fas fa-envelope"
+            }
+        ]
     },
     "work": [
         {
-            "company": "Eineva Tech",
+            "company": "EinevaTech",
             "position": "Founder",
             "website": "https://eineva.co.zw/",
             "startDate": "2013-01-01",
-            "endDate": "2014-01-01",
-            "summary": "Description...",
+            "endDate": "",
+            "summary": "Founder at EinevaTech.",
             "highlights": ["Started the company"]
         }
     ],
@@ -56,6 +93,20 @@
             "courses": ["DB1101 - Basic SQL"]
         }
     ],
+    "certifications": [
+        {
+            "name": "Responsive Web Design",
+            "authority": "freeCodeCamp"
+        },
+        {
+            "name": "Scientific Computing with Python",
+            "authority": "freeCodeCamp"
+        },
+        {
+            "name": "Back End Development and APIs",
+            "authority": "freeCodeCamp"
+        }
+    ],
     "awards": [
         {
             "title": "Award",
@@ -75,29 +126,56 @@
     ],
     "skills": [
         {
-            "name": "Web Development",
-            "level": "Master",
-            "keywords": ["HTML", "CSS", "Javascript"]
+            "name": "JavaScript",
+            "keywords": ["ES6+", "Async/Await", "DOM", "Fetch API"]
+        },
+        {
+            "name": "TypeScript",
+            "keywords": ["Types", "Interfaces", "Generics"]
+        },
+        {
+            "name": "React",
+            "keywords": ["Hooks", "Context API", "SPA"]
+        },
+        {
+            "name": "React Native",
+            "keywords": ["Cross-platform", "Expo", "Mobile UI"]
+        },
+        {
+            "name": "Django",
+            "keywords": ["ORM", "Templates", "Admin", "REST"]
+        },
+        {
+            "name": "Python",
+            "keywords": ["Scripting", "OOP", "Data Structures"]
+        },
+        {
+            "name": "GIS",
+            "keywords": ["GeoJSON", "QGIS", "Leaflet", "Spatial Data"]
+        },
+        {
+            "name": "Node.js",
+            "keywords": ["Express", "REST APIs", "Middleware"]
+        },
+        {
+            "name": "Next.js",
+            "keywords": ["SSR", "Static Site Generation", "API Routes"]
         }
     ],
     "languages": [
         {
-            "language": "German",
-            "fluency": "Native speaker"
-        },
-        {
             "language": "English",
-            "fluency": "Fluent speaker"
+            "fluency": "Fluent"
         },
         {
-            "language": "French",
-            "fluency": "Good knowledge"
+            "language": "Shona",
+            "fluency": "Native"
         }
     ],
     "interests": [
         {
-            "name": "Wildlife",
-            "keywords": ["Ferrets", "Unicorns"]
+            "name": "Farming",
+            "keywords": ["Sustainable agriculture", "Crop rotation"]
         }
     ],
     "references": [
