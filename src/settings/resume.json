@@ -24,32 +24,32 @@
         "profiles": [
             {
                 "network": "GitHub",
-                "username": "your-github",
-                "url": "https://github.com/your-github",
+                "username": "ConsoleMangena",
+                "url": "https://github.com/ConsoleMangena",
                 "x_icon": "fab fa-github"
             },
             {
                 "network": "LinkedIn",
-                "username": "your-linkedin",
-                "url": "https://www.linkedin.com/in/your-linkedin",
+                "username": "#",
+                "url": "#",
                 "x_icon": "fab fa-linkedin-in"
             },
             {
                 "network": "Telegram",
-                "username": "your-telegram",
-                "url": "https://t.me/your-telegram",
+                "username": "#",
+                "url": "#",
                 "x_icon": "fab fa-telegram-plane"
             },
             {
                 "network": "Instagram",
-                "username": "your-instagram",
-                "url": "https://instagram.com/your-instagram",
+                "username": "#",
+                "url": "#",
                 "x_icon": "fab fa-instagram"
             },
             {
                 "network": "Facebook",
-                "username": "your-facebook",
-                "url": "https://facebook.com/your-facebook",
+                "username": "#",
+                "url": "#",
                 "x_icon": "fab fa-facebook-f"
             },
             {
